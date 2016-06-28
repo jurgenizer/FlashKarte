@@ -16,7 +16,11 @@ import UIKit
 
 class TermController: UIViewController {
 
-    @IBOutlet weak var termLabel: UILabel!
+
+    
+    @IBOutlet weak var termButton: UIButton!
+    
+    
     let deck = Deck()
     var flashcard: Flashcard?
     
@@ -28,7 +32,7 @@ class TermController: UIViewController {
         super.viewWillAppear(animated)
         if let flashcard = deck.randomCard {
             self.flashcard = flashcard
-            termLabel.text = flashcard.term
+            termButton.setTitle(flashcard.term, forState: .Normal)
         }
     }
     

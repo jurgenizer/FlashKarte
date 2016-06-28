@@ -1,7 +1,14 @@
+//
+//  AppDelegate.swift
+//  FlashKarte
+//
+//  Created by Jurgen Geitner on 2016/01/22.
+//
+
 /*
 
 This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike
-4.0 International License, by Yong Bakos.
+4.0 International License, by Yong Bakos and Jurgen Geitner.
 
 */
 
@@ -14,6 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Change the color of the NavBar
+        UINavigationBar.appearance().barTintColor = UIColor(red: 255.0/255.0, green: 0.0/255.0, blue: 128.00/255.0, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        
+        
+        application.statusBarStyle = UIStatusBarStyle.LightContent
+        
         return true
     }
 

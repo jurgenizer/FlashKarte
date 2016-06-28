@@ -22,6 +22,24 @@
             </objects>
             <point key="canvasLocation" x="-259" y="-130"/>
         </scene>
+        <!--Info View Controller-->
+        <scene sceneID="WBg-96-WY3">
+            <objects>
+                <viewController title="Info View Controller" id="xGk-rw-ELh" customClass="InfoViewController" customModule="FlashKarte" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SDo-TW-xX6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ufw-IY-9wo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yCF-Sj-6gi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Wv-O6-5EQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487" y="-858"/>
+        </scene>
         <!--Term Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -54,6 +72,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Term" id="CgF-uU-8f3">
+                        <barButtonItem key="leftBarButtonItem" image="info" id="467-lr-4f1">
+                            <connections>
+                                <segue destination="xGk-rw-ELh" kind="show" id="Q98-Bs-5l8"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Definition" id="fAt-2K-V3f">
                             <connections>
                                 <segue destination="6VB-Ks-WWD" kind="show" id="bNy-fm-8hB"/>
@@ -147,6 +170,9 @@
             <point key="canvasLocation" x="1905" y="-130"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info" width="30" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="bNy-fm-8hB"/>
     </inferredMetricsTieBreakers>

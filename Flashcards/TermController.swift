@@ -6,11 +6,15 @@
 //
 
 /*
+ This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike
+ 4.0 International License, by Jurgen Geitner.
+ 
+ Based on a tutorial by Young Bakos, hence the license below:
  
  This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike
- 4.0 International License, by Yong Bakos and Jurgen Geitner.
- 
+ 4.0 International License, by Yong Bakos.
  */
+
 
 import UIKit
 

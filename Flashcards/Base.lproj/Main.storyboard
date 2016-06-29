@@ -33,8 +33,35 @@
                     <view key="view" contentMode="scaleToFill" id="yCF-Sj-6gi">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4KI-tD-6rj">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="O7a-ao-hLb">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O7a-ao-hLb" id="THv-sh-gr6">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xGk-rw-ELh" id="WV2-Zt-BdJ"/>
+                                    <outlet property="delegate" destination="xGk-rw-ELh" id="vTr-Qg-LoR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ufw-IY-9wo" firstAttribute="top" secondItem="4KI-tD-6rj" secondAttribute="bottom" id="661-ne-pwb"/>
+                            <constraint firstItem="4KI-tD-6rj" firstAttribute="leading" secondItem="yCF-Sj-6gi" secondAttribute="leadingMargin" constant="-20" id="80y-Nm-2s5"/>
+                            <constraint firstItem="4KI-tD-6rj" firstAttribute="top" secondItem="SDo-TW-xX6" secondAttribute="bottom" id="EHn-14-Aoa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4KI-tD-6rj" secondAttribute="trailing" constant="-20" id="wbr-RL-SQA"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Info" id="1CJ-mc-P3B"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Wv-O6-5EQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

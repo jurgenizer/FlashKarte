@@ -3,6 +3,12 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
+      "filename" : "Icon-Small-1.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
       "filename" : "Icon-Small@2x.png",
       "scale" : "2x"
     },
@@ -91,18 +97,10 @@
       "scale" : "2x"
     },
     {
-      "size" : "29x29",
-      "idiom" : "watch",
-      "filename" : "Icon-Small@2x-1.png",
-      "role" : "companionSettings",
-      "scale" : "2x"
-    },
-    {
-      "size" : "29x29",
-      "idiom" : "watch",
-      "filename" : "Icon-Small@3x-1.png",
-      "role" : "companionSettings",
-      "scale" : "3x"
+      "size" : "512x512",
+      "idiom" : "mac",
+      "filename" : "iTunesArtwork.png",
+      "scale" : "1x"
     },
     {
       "size" : "512x512",

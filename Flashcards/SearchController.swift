@@ -21,6 +21,7 @@ import UIKit
 class SearchController: UIViewController {
     
     @IBOutlet weak var webView: UIWebView!
+    
     var flashcard: Flashcard?
     let baseSearchURL = "https://google.com/search?q=apple developer"
     

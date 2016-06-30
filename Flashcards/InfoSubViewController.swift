@@ -1,50 +1,28 @@
 //
-//  InfoViewController.swift
+//  InfoSubViewController.swift
 //  FlashKarte
 //
-//  Created by Jurgen Geitner on 2016/06/28.
+//  Created by Jurgen Geitner on 2016/06/30.
 //  Copyright © 2016 Jurgen Geitner. All rights reserved.
 //
 
 import UIKit
 
-class InfoViewController: UIViewController, UITableViewDelegate {
-    
-    //array for cell content
-    var cellContent = ["Jurgen", "Natalie"]
+class InfoSubViewController: UIViewController {
 
+    @IBOutlet weak var InfoSubViewTextView: UITextView!
+    
+    var blogName = String()
+    
+    override func viewWillAppear(animated: Bool) {
+        InfoSubViewTextView.text = blogName
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-         return cellContent.count
-        
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "myCell")
-        
-        cell.textLabel?.text = cellContent[indexPath.row]
-        
-        return cell
-        
-   }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

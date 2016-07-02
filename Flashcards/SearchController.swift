@@ -22,11 +22,15 @@ class SearchController: UIViewController {
     
     @IBOutlet weak var webView: UIWebView!
     
+    @IBOutlet weak var activity: UIActivityIndicatorView!
+    
+    
     var flashcard: Flashcard?
     let baseSearchURL = "https://google.com/search?q=apple developer"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if let card = flashcard,
             escapedURLString = searchURLString(baseSearchURL, term: card.term),
             url = NSURL(string: escapedURLString) {
@@ -39,4 +43,26 @@ class SearchController: UIViewController {
             .stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
     }
 
+    //functions for UIActivityIndicatorView activity
+    
+    func webViewDidStartLoad(webView: UIWebView) {
+        
+        activity.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
+        activity.color = UIColor(red: 255.0/255.0, green: 0.0/255.0, blue: 128.00/255.0, alpha: 1.0)
+        activity.hidden = false
+        activity.startAnimating()
+        
+    }
+    
+    func webViewDidFinishLoad(webView: UIWebView) {
+        
+        activity.stopAnimating()
+        activity.hidesWhenStopped = true
+        
+    }
+
+    
+    
+    
+    
 }

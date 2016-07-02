@@ -12,16 +12,21 @@ class InfoSubViewController: UIViewController {
 
     @IBOutlet weak var InfoSubViewTextView: UITextView!
     
-    var blogName = String()
+    var thankYouText = String()
     
     override func viewWillAppear(animated: Bool) {
-        InfoSubViewTextView.text = blogName
+        
+      InfoSubViewTextView.text = thankYouText
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //lets print thankYouText to see if it got here via the segue
+        print("thankYouText")
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,5 +44,8 @@ class InfoSubViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+  
+    
 
 }

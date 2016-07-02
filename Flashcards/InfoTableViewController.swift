@@ -91,20 +91,37 @@ class InfoTableViewController: UITableViewController {
             
 
 
- 
 
 
    
- 
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func prepareForSegue(segue: UIStoryboardSegue,sender: AnyObject?) {
+        
+        if let destination = segue.destinationViewController as? InfoSubViewController {
+            
+          let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
+            
+          let selectedCell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
+            
+            // Configure the cell...
+            
+           // selectedCell.textLabel?.text = objectArray[indexPath.section].sectionName
+            
+            //pass the selected string object value to the Search View Controller
+            
+           //destination.thankYouText = objectArray[indexPath.section].sectionName
+            
+           destination.thankYouText = objectArray[indexPath.section].sectionData[indexPath.row]
+         
+           selectedCell.setSelected(false, animated: true)
+            
+           selectedCell.accessoryType = .DisclosureIndicator
+            
+            
+        }
     }
-    */
+
 
 }
